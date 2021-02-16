@@ -17,7 +17,7 @@ class AdminSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'Administrator';
-        $user->email = 'reach@stevenyanumba.com';
+        $user->email = env('ADMIN_EMAIL');
         $user->password = Hash::make(env('ADMIN_PASSWORD'));
         $user->isAdmin = true;
 
